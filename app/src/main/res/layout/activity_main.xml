@@ -11,8 +11,8 @@
         android:id="@+id/txtDisplay"
         android:layout_width="357dp"
         android:layout_height="68dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
         android:text="PLEASE FILL IN ALL THE BLANK SPACES "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_width="340dp"
         android:layout_height="48dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="33dp"
         android:ems="10"
         android:hint="ENTER SONG "
@@ -90,6 +90,16 @@
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="185dp"
         android:text="REVIEW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnExist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="95dp"
+        android:text="EXIST"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -1,5 +1,6 @@
 package vcmsa.ci.test
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,19 +10,20 @@ import androidx.appcompat.app.AppCompatActivity
 
 @Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
-
+// declared and intialised the arrays
     private val songname = arrayOf<String>()
     private val artistname = arrayOf<String>()
     private val ratings = arrayOf<Int>()
     private val comments = arrayOf<String>()
     private val maxSize = 3
-
+    // used methods to declare variables
     private lateinit var edtSong: EditText
     private lateinit var edtArtist: EditText
     private lateinit var edtRating: EditText
     private lateinit var edtComment: EditText
     private lateinit var btnReview: Button
     private lateinit var btnAdd: Button
+    private lateinit var  btnExist : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,8 +38,9 @@ class MainActivity : AppCompatActivity() {
         edtComment = findViewById(R.id.edtComment)
         btnAdd = findViewById(R.id.btnAdd)
         btnReview = findViewById(R.id.btnReview)
+        btnExist = findViewById(R.id.btnExist)
 
-
+        // used the add button to display the edit texts
         btnAdd.setOnClickListener {
             val song = edtSong.text.toString()
             val artist = edtArtist.text.toString()
@@ -69,7 +72,20 @@ class MainActivity : AppCompatActivity() {
                 add(ratings)
                 add(comments)
             }
+            // next screen
+            btnReview.setOnClickListener {
+                val intent = Intent(this,detailedViewScreen::class.java)
+                intent.putExtra("Song",songname)
+                intent.putExtra("Artist",artistname)
+                intent.putExtra("Rate",ratings)
+                intent.putExtra("Comment",comments)
+                intent.putExtra("max",maxSize)
 
+                startActivity(intent)
+            }
+            btnExist.setOnClickListener {
+                finish()
+            }
         }
 
 

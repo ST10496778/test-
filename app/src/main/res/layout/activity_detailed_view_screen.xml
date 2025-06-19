@@ -9,10 +9,11 @@
 
     <TextView
         android:id="@+id/txtShow"
-        android:layout_width="282dp"
-        android:layout_height="238dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="306dp"
+        android:layout_height="228dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="144dp"
+        android:hint="results"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,8 +21,8 @@
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginBottom="78dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="76dp"
         android:text="CALCULATE"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnReturn"
